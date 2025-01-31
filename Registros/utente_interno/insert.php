@@ -24,16 +24,24 @@
         // Taking all 5 values from the form data(input)
         $nome =  $_REQUEST['nome_completo'];
         $email = $_REQUEST['email'];
-        $senha = $_REQUEST['senha'];
+        $endereco = $_REQUEST['endereco'];
+        $genero= $_REQUEST['genero'];
         $telefone1 =$_REQUEST['telefone1'];
         $telefone2 = $_REQUEST['telefone2'];
-        $genero= $_REQUEST['genero'];
+        $numero_cartao = $_REQUEST['numero_cartao'];
+        $departamento = $_REQUEST['departamento'];
+        $tipo= $_REQUEST['tipo'];
+
+     //   $numero_estudante= $_REQUEST['numero_estudante'];
+
+
+
        
         
         // Performing insert query execution
         // here our table name is college
-        $sql = "INSERT INTO funcionario(email,senha,nome,telefone1,telefone2,genero)  VALUES"
-        . "  ('$email','$senha','$nome','$telefone1','$telefone2','$genero')";
+        $value = 5;
+        $sql = "select inserir_utente_interno($value,'$nome','$endereco','$telefone1','$telefone2','$numero_cartao','$departamento','ACTIVO','$tipo')";
    
         
         if(mysqli_query($conn, $sql)){
