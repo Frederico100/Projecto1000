@@ -40,7 +40,7 @@
         
         // Performing insert query execution
         // here our table name is college
-        $value = 5;
+        $value = 10;
         $sql = "select inserir_utente_interno($value,'$nome','$endereco','$telefone1','$telefone2','$numero_cartao','$departamento','ACTIVO','$tipo')";
    
         
